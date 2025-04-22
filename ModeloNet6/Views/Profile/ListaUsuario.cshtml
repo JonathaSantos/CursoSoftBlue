@@ -1,0 +1,27 @@
+﻿@model List<UsuariosViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">Perfil</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int cont = 0;
+        }
+        @foreach (var usuario in Model)
+        {
+            cont++;
+            <tr>
+                <th scope="row">@cont</th>
+                <td>@usuario.usuario</td>
+                <td>@usuario.perfil</td>
+                <td>-</td>
+            </tr>
+        }
+    </tbody>
+</table>

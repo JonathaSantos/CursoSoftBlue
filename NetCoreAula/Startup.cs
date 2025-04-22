@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NetCoreAula.Data;
-using NetCoreAula.Events;
+using ModeloNet6.Data;
+using ModeloNet6.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NetCoreAula
+namespace ModeloNet6
 {
     public class Startup
     {

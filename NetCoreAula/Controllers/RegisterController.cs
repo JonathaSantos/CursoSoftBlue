@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreAula.Data;
-using NetCoreAula.Helpers;
-using NetCoreAula.Models;
-using NetCoreAula.ViewModels;
+using ModeloNet6.Data;
+using ModeloNet6.Helpers;
+using ModeloNet6.Models;
+using ModeloNet6.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

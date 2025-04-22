@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using NetCoreAula.Data;
-using NetCoreAula.Models;
+using ModeloNet6.Data;
+using ModeloNet6.Models;
 using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace NetCoreAula.Events
+namespace ModeloNet6.Events
 {
 
     public class UserCookieAuthenticationEvents : CookieAuthenticationEvents

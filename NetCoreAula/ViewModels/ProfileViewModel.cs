@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace NetCoreAula.ViewModels
+namespace ModeloNet6.ViewModels
 {
     public class ProfileViewModel
     {

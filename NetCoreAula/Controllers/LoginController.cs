@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreAula.Data;
-using NetCoreAula.Helpers;
-using NetCoreAula.ViewModels;
+using ModeloNet6.Data;
+using ModeloNet6.Helpers;
+using ModeloNet6.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace NetCoreAula.Controllers
+namespace ModeloNet6.Controllers
 {
     public class LoginController : Controller
     {

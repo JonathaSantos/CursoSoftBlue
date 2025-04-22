@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace NetCoreAula.Helpers
+namespace ModeloNet6.Helpers
 {
     public class Hash
     {

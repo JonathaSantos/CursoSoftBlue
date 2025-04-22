@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreAula.Data;
-using NetCoreAula.Models;
+using ModeloNet6.Data;
+using ModeloNet6.Models;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;

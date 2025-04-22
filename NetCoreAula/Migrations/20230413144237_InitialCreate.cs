@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NetCoreAula.Migrations
+namespace ModeloNet6.Migrations
 {
     public partial class InitialCreate : Migration
     {

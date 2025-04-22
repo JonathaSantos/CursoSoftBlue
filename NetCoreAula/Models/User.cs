@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace NetCoreAula.Models
+namespace ModeloNet6.Models
 {
     public class User
     {

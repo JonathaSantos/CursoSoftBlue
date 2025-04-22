@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreAula.Data;
-using NetCoreAula.Models;
-using NetCoreAula.ViewModels;
+using ModeloNet6.Data;
+using ModeloNet6.Models;
+using ModeloNet6.ViewModels;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace NetCoreAula.Controllers
+namespace ModeloNet6.Controllers
 {
     [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
     public class ItemController : Controller

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ImcMauiApp.Mvvm.Views.ImcView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="IMC">
+    <FlexLayout Direction="Column" JustifyContent="SpaceEvenly">
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Image
+                HeightRequest="120"
+                Source="imc2.jpg"
+                WidthRequest="120" />
+        </HorizontalStackLayout>
+        <Frame
+            Margin="5"
+            BackgroundColor="MistyRose"
+            CornerRadius="30">
+            <StackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Qual a sua altura?" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="{Binding Source={x:Reference SlideAltura}, Path=Value, StringFormat='{0:F0} cm'}" />
+                <Slider
+                    x:Name="SlideAltura"
+                    Maximum="240"
+                    Minimum="35"
+                    Value="{Binding Altura}}" />
+            </StackLayout>
+        </Frame>
+        <Frame
+            Margin="5"
+            BackgroundColor="MistyRose"
+            CornerRadius="30">
+            <StackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Quanto você pesa?" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="{Binding Source={x:Reference SlidePeso}, Path=Value, StringFormat='{0:F0} kg'}" />
+                <Slider
+                    x:Name="SlidePeso"
+                    Maximum="320"
+                    Minimum="35"
+                    Value="{Binding Peso}}" />
+            </StackLayout>
+        </Frame>
+        <Frame
+            Margin="10"
+            BackgroundColor="AliceBlue"
+            HasShadow="True">
+            <StackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Seu IMC é : " />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="{Binding Imc}"
+                    TextColor="Blue" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="{Binding Classificacao}"
+                    TextColor="Brown" />
+            </StackLayout>
+        </Frame>
+    </FlexLayout>
+</ContentPage>

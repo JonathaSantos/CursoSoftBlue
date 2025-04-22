@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using NetCoreAula.Models;
+using ModeloNet6.Models;
 
 
-namespace NetCoreAula.Data
+namespace ModeloNet6.Data
 {
     public class ApplicationDbContext : DbContext
     {
