@@ -44,17 +44,14 @@ namespace Agenda.Repos.Test
         [Test]
         public void DeveSerPossivelObterContatoComListaTelefone()
         {
-            Guid telefoneId = Guid.NewGuid();
-            Guid contatoId = Guid.NewGuid();
+            var telefoneId = Guid.NewGuid();
+            var contatoId = Guid.NewGuid();
 
             var lstTelefone = new List<ITelefone>();
 
             // Monta - arrange
             // Criar Moq de IContato
             var mContato = IContatoConstr.Um().ComNumeroID(contatoId).ComNome("Jonatha").Obter();
-            //var mContato = new Mock<IContato>();
-            //mContato.SetupGet(o => o.Id).Returns(contatoId);
-            //mContato.SetupGet(o => o.Nome).Returns("João");
 
             mContato.SetupSet(o => o.Telefones = It.IsAny<List<ITelefone>>())
                 .Callback<List<ITelefone>>(p => lstTelefone = p);
@@ -62,12 +59,6 @@ namespace Agenda.Repos.Test
             // Moq da função ObterPor ID de IContatos
             _contatos.Setup(o => o.Obter(contatoId)).Returns(mContato.Object);
 
-            // Criar moq de Itelefone
-            //var mTelefone = new Mock<ITelefone>();
-
-            //mTelefone.SetupGet(o => o.Id).Returns(telefoneId);
-            //mTelefone.SetupGet(j => j.Numero).Returns("1234-1234");
-            //mTelefone.SetupGet(j => j.ContatoId).Returns(contatoId);
 
             // Agora com moq na classe
             var mockTelefone = ITelefoneConstr.Um().Padrao().ComId(telefoneId)

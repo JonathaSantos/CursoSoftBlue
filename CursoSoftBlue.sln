@@ -51,11 +51,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teste Net6", "Teste Net6\Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoCertificado", "EstudoCertificado\EstudoCertificado.csproj", "{788E5C09-7333-4463-8275-352D2905FDC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula_TDD_Testes_Unitarios_integrados", "Aula_TDD_Testes_Unitarios_integrados\Aula_TDD_Testes_Unitarios_integrados.csproj", "{8F28A374-49D7-445B-918D-3C09A0989752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aula_TDD_Testes_Unitarios_integrados", "Aula_TDD_Testes_Unitarios_integrados\Aula_TDD_Testes_Unitarios_integrados.csproj", "{8F28A374-49D7-445B-918D-3C09A0989752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Teste_Aula_TDD_", "Projeto_Teste_Aula_TDD_\Projeto_Teste_Aula_TDD_.csproj", "{BA7A6947-ADEE-47EB-A438-09CD981E9FEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto_Teste_Aula_TDD_", "Projeto_Teste_Aula_TDD_\Projeto_Teste_Aula_TDD_.csproj", "{BA7A6947-ADEE-47EB-A438-09CD981E9FEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda.UIDesktop", "Agenda.UIDesktop\Agenda.UIDesktop.csproj", "{5CF337ED-8AB6-456C-BA5B-8BAA01591E2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Agenda.UIDesktop", "Agenda.UIDesktop\Agenda.UIDesktop.csproj", "{5CF337ED-8AB6-456C-BA5B-8BAA01591E2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda.DAL", "Agenda.DAL\Agenda.DAL.csproj", "{58E688B6-B637-418D-AE2B-1C5AB893954F}"
 EndProject
@@ -68,6 +68,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda.Repos", "Agenda.Repos\Agenda.Repos.csproj", "{7D780A81-F5A7-4F36-9FE5-194AB8E5C4E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda.Repos.Test", "Agenda.Repos.Test\Agenda.Repos.Test.csproj", "{EAFB31B7-4E31-45E4-9F60-F15D07DD6157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula_Delegates_métodos_anônimos", "Aula_Delegates_métodos_anônimos\Aula_Delegates_métodos_anônimos.csproj", "{67DF2326-631B-46D3-8E66-CC4B51FB3282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -641,6 +643,22 @@ Global
 		{EAFB31B7-4E31-45E4-9F60-F15D07DD6157}.Release|x64.Build.0 = Release|Any CPU
 		{EAFB31B7-4E31-45E4-9F60-F15D07DD6157}.Release|x86.ActiveCfg = Release|Any CPU
 		{EAFB31B7-4E31-45E4-9F60-F15D07DD6157}.Release|x86.Build.0 = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|ARM.Build.0 = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|x64.Build.0 = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Debug|x86.Build.0 = Debug|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|ARM.ActiveCfg = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|ARM.Build.0 = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|x64.ActiveCfg = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|x64.Build.0 = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|x86.ActiveCfg = Release|Any CPU
+		{67DF2326-631B-46D3-8E66-CC4B51FB3282}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
