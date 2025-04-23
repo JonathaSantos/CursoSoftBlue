@@ -51,11 +51,11 @@ namespace Agenda.Repos.Test
 
             // Monta - arrange
             // Criar Moq de IContato
-            var mContato = new Mock<IContato>();
+            var mContato = IContatoConstr.Um().ComNumeroID(contatoId).ComNome("Jonatha").Obter();
+            //var mContato = new Mock<IContato>();
+            //mContato.SetupGet(o => o.Id).Returns(contatoId);
+            //mContato.SetupGet(o => o.Nome).Returns("João");
 
-
-            mContato.SetupGet(o => o.Id).Returns(contatoId);
-            mContato.SetupGet(o => o.Nome).Returns("João");
             mContato.SetupSet(o => o.Telefones = It.IsAny<List<ITelefone>>())
                 .Callback<List<ITelefone>>(p => lstTelefone = p);
 

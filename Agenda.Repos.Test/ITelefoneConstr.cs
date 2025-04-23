@@ -10,47 +10,72 @@ using System.Threading.Tasks;
 
 namespace Agenda.Repos.Test
 {
-    public class ITelefoneConstr
+    public class BaseConstr<T> where T : class
     {
-        Mock<ITelefone> _mockTelefone;
-        Fixture _fixture;
-
-        protected ITelefoneConstr(Mock<ITelefone> mockTelefone, Fixture fixture)
+        protected readonly Fixture _fixture;
+        protected readonly Mock<T> _mock;
+        protected BaseConstr()
         {
-            _mockTelefone = mockTelefone;
-            _fixture = fixture;
+            _fixture = new Fixture();
+            _mock = new Mock<T>();
         }
 
+        public T Construir()
+        {
+            return _mock.Object;
+        }
+
+        public Mock<T> Obter()
+        {
+            return _mock;
+        }
+    }
+
+    public class ITelefoneConstr : BaseConstr<ITelefone>
+    {
+        //protected readonly Mock<ITelefone> _mockTelefone;
+        //protected readonly Fixture _fixture;
+
+        //protected ITelefoneConstr(Mock<ITelefone> mockTelefone)
+        //{
+        //    _mockTelefone = mockTelefone;
+
+        //}
+        protected ITelefoneConstr() : base()
+        {
+
+        }
         public static ITelefoneConstr Um()
         {
-            return new ITelefoneConstr(new Mock<ITelefone>(), new Fixture());
+            //return new ITelefoneConstr(new Mock<ITelefone>());
+            return new ITelefoneConstr();
         }
 
-        public ITelefone Construir()
-        {
-            return _mockTelefone.Object;
-        }
+        //public ITelefone Construir()
+        //{
+        //    return _mockTelefone.Object;
+        //}
 
         public ITelefoneConstr Padrao()
         {
-            _mockTelefone.SetupGet(o => o.Id).Returns(_fixture.Create<Guid>());
-            _mockTelefone.SetupGet(o => o.Numero).Returns(_fixture.Create<string>());
-            _mockTelefone.SetupGet(o => o.ContatoId).Returns(_fixture.Create<Guid>());
+            _mock.SetupGet(o => o.Id).Returns(_fixture.Create<Guid>());
+            _mock.SetupGet(o => o.Numero).Returns(_fixture.Create<string>());
+            _mock.SetupGet(o => o.ContatoId).Returns(_fixture.Create<Guid>());
             return this;
         }
         public ITelefoneConstr ComId(Guid id)
         {
-            _mockTelefone.SetupGet(o => o.Id).Returns(id);
+            _mock.SetupGet(o => o.Id).Returns(id);
             return this;
         }
         public ITelefoneConstr ComNumero(string numero)
         {
-            _mockTelefone.SetupGet(o => o.Numero).Returns(numero);
+            _mock.SetupGet(o => o.Numero).Returns(numero);
             return this;
         }
         public ITelefoneConstr ComContatoId(Guid contatoID)
         {
-            _mockTelefone.SetupGet(o => o.ContatoId).Returns(contatoID);
+            _mock.SetupGet(o => o.ContatoId).Returns(contatoID);
             return this;
         }
 
