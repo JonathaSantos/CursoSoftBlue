@@ -5,25 +5,35 @@
 
         public delegate int MetodoDelegate(string nome);
 
-        public static int QualquerMetodo(string pessoa) {
-            Console.WriteLine("No método DELEGATE, Nome " + pessoa);
-            return pessoa.Length;
-        }
+        //public static int QualquerMetodo(string pessoa) {
+        //    Console.WriteLine("No método DELEGATE, Nome " + pessoa);
+        //    return pessoa.Length;
+        //}
+
+
 
         public static void utilizaDelegate(MetodoDelegate metodoDelegate)
         {
-           var letras = metodoDelegate(" Maria");
+            var letras = metodoDelegate(" Maria");
             Console.WriteLine($"Quantidade de LEtras: {letras}");
         }
 
         static void Main(string[] args)
         {
 
-            utilizaDelegate(QualquerMetodo);
+            //utilizaDelegate(QualquerMetodo);
 
             // esse conceito ele é tipo
             //MetodoDelegate metodoDelegate = new MetodoDelegate(QualquerMetodo);
-            MetodoDelegate metodoDelegate = QualquerMetodo;
+            //MetodoDelegate metodoDelegate = QualquerMetodo;
+
+            MetodoDelegate metodoDelegate = delegate (string n)
+                {
+                    Console.WriteLine(" Nome: " + n);
+                    return n.Length;
+                };
+
+
 
             var letras = metodoDelegate(" Madalena");
             Console.WriteLine($"Quantidade de LEtras: {letras}");
