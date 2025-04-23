@@ -23,6 +23,56 @@
 
         static void Main(string[] args)
         {
+            //  O tipo Nullable
+
+
+            Nullable<bool> v1 = null;
+
+            bool? v2 = null;
+            bool v3 = false;
+
+
+            if (v1 is null)
+            {
+                Console.WriteLine("Valor Nulo");
+            }
+
+            // forma de atribuir valores 
+            if (v2.HasValue)
+            {
+                v3 = v2.Value;
+            }
+
+            if (v2 !=null)
+            {
+                v3 = v2.Value;
+            }
+            Console.WriteLine("Valor do v3 " + v3 + " \n\n");
+
+            if (v2 is not null)
+            {
+                v3 = v2.Value;
+            }
+            Console.WriteLine("Valor do v3 " + v3 + " \n\n");
+
+            v3 = v2.GetValueOrDefault();
+            Console.WriteLine("Valor do v3 " + v3 + " \n\n");
+
+            v3 = v2 ?? false;
+
+
+
+
+            Console.WriteLine("Valor do v3 " + v3 + " \n\n") ;
+
+
+
+
+
+
+
+
+
 
             Predicate<int> pred = (num) => true; // delegate generico 
             Predicate<int> pred1 = (num) => num%2==0;
