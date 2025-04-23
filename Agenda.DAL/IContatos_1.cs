@@ -8,12 +8,12 @@ using System.Linq;
 
 namespace Agenda.DAL
 {
-    public class Contatos
+    public class IContatos
     {
         string _strConexao;
       
 
-        public Contatos()
+        public IContatos()
         {
             //_strConexao = @"Data Source=JONATHANOTE\SQLEXPRESS;Initial Catalog=Agenda;Integrated Security=true;TrustServerCertificate=True;User ID=sa;Password=123456;";
             _strConexao = ConfigurationManager.ConnectionStrings["con"].ConnectionString;

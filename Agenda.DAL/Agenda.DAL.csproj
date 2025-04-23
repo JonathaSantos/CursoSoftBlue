@@ -54,7 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contatos.cs" />
+    <Compile Include="IContatos_1.cs" />
+    <Compile Include="IContatos.cs" />
+    <Compile Include="ITelefones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
