@@ -1,4 +1,7 @@
-﻿namespace Aula_Delegates_métodos_anônimos
+﻿using System;
+using FluentValidation.Results;  
+
+namespace Aula_Delegates_métodos_anônimos
 {
     internal class Program
     {
@@ -23,6 +26,25 @@
 
         static void Main(string[] args)
         {
+            Console.WriteLine(" Validando Cliente");
+            // 
+            Cliente cliente = new Cliente(); // {Nome = "Jonatha" };
+            ClienteValidator clienteValidator = new ClienteValidator();
+            ValidationResult validationResult = clienteValidator.Validate(cliente);
+            //
+            Console.WriteLine("REsultado da validação:  " + validationResult.IsValid + "\n\n");
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var erro in validationResult.Errors)
+                {
+                    Console.WriteLine($" Propriedade {erro.PropertyName} Msg: {erro.ErrorMessage} \n ");
+                }
+                
+            }
+
+            Console.WriteLine("\n\n");
+
             //  O tipo Nullable
 
 
