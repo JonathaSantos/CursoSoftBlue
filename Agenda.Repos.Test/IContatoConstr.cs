@@ -8,14 +8,6 @@ namespace Agenda.Repos.Test
 {
     public class IContatoConstr : BaseConstr<IContato>
     {
-        //private readonly Mock<IContato> _mockIContato;
-        //private readonly Fixture _fixture;
-
-        //protected IContatoConstr(Mock<IContato> mockIContato)//, Fixture fixture)
-        //{
-        //    _mockIContato = mockIContato;
-        //    //_fixture = fixture;
-        //}
 
         protected IContatoConstr():base()    
         {
@@ -24,26 +16,9 @@ namespace Agenda.Repos.Test
 
         public static IContatoConstr Um()
         {
-            //return new IContatoConstr(new Mock<IContato>(), new Fixture());
             return new IContatoConstr();
         }
 
-        //public IContato Construir()
-        //{
-        //    return _mockIContato.Object;
-        //}
-
-        //public Mock<IContato> Obter()
-        //{
-        //    return _mockIContato;
-        //}
-        //public IContatoConstr Padrao()
-        //{
-        //    _mockIContato.SetupGet(o => o.Id).Returns(_fixture.Create<Guid>());
-        //    _mockIContato.SetupGet(o => o.Numero).Returns(_fixture.Create<string>());
-        //    _mockIContato.SetupGet(o => o.ContatoId).Returns(_fixture.Create<Guid>());
-        //    return this;
-        //}
         public IContatoConstr ComNome(string nome)
         {
             _mock.SetupGet(o => o.Nome).Returns(nome);
@@ -54,7 +29,5 @@ namespace Agenda.Repos.Test
             _mock.SetupGet(o => o.Id).Returns(id);
             return this;
         }
-
-
     }
 }

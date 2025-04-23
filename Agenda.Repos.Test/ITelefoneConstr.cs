@@ -10,52 +10,18 @@ using System.Threading.Tasks;
 
 namespace Agenda.Repos.Test
 {
-    public class BaseConstr<T> where T : class
-    {
-        protected readonly Fixture _fixture;
-        protected readonly Mock<T> _mock;
-        protected BaseConstr()
-        {
-            _fixture = new Fixture();
-            _mock = new Mock<T>();
-        }
-
-        public T Construir()
-        {
-            return _mock.Object;
-        }
-
-        public Mock<T> Obter()
-        {
-            return _mock;
-        }
-    }
+    
 
     public class ITelefoneConstr : BaseConstr<ITelefone>
     {
-        //protected readonly Mock<ITelefone> _mockTelefone;
-        //protected readonly Fixture _fixture;
-
-        //protected ITelefoneConstr(Mock<ITelefone> mockTelefone)
-        //{
-        //    _mockTelefone = mockTelefone;
-
-        //}
         protected ITelefoneConstr() : base()
         {
 
         }
         public static ITelefoneConstr Um()
         {
-            //return new ITelefoneConstr(new Mock<ITelefone>());
             return new ITelefoneConstr();
         }
-
-        //public ITelefone Construir()
-        //{
-        //    return _mockTelefone.Object;
-        //}
-
         public ITelefoneConstr Padrao()
         {
             _mock.SetupGet(o => o.Id).Returns(_fixture.Create<Guid>());
